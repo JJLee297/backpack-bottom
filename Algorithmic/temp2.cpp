@@ -16,27 +16,27 @@ int main() {
 		if (seed < 5) {
 			int x = rand() % 15 + 35;
 			int y = rand() % 25 + 35;
-			points[i][1] = x;
-			points[i][2] = y;
+			points[i][0] = x;
+			points[i][1] = y;
 			cout << "(" << x << "," << y << "), ";
 		}
 		else if (seed < 9) {
 			int x = rand() % 30 + 1;
 			int y = rand() % 30 + 1;
-			points[i][1] = x;
-			points[i][2] = y;
+			points[i][0] = x;
+			points[i][1] = y;
 			cout << "(" << x << "," << y << "), ";
 		}
 		else {
 			int x = rand() % 100 + 1;
 			int y = rand() % 100 + 1;
-			points[i][1] = x;
-			points[i][2] = y;
+			points[i][0] = x;
+			points[i][1] = y;
 			cout << "(" << x << "," << y << "), ";
 		}
 	}
 	cout << "\n\n" << endl;
 	for (int i = 0; i < 100; ++i) {
-		cout << points[i][0] << " " << points[i][2] << endl;
+		cout << points[i][0] << " " << points[i][1] << endl;
 	}
 }
