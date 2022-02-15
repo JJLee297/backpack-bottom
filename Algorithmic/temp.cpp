@@ -54,10 +54,11 @@ int main() {
 	for (int x = 0; x < numPoints; ++x) {
 		for (int y = (x + 1); y < numPoints; ++y) {
 			if (sqrt(pow(points.at(x).returnY() - points.at(y).returnY(), 2) + pow(points.at(x).returnX() - points.at(y).returnX(), 2)) <= radius * 2) {
+				cout << "valid (" << x << ", " << y << ")";
 				int p = countPoints((points.at(x).returnX() + points.at(y).returnX()) / 2, (points.at(x).returnY() + points.at(y).returnY()) / 2);
-				if (mostp <= p) {
-					ansx = points.at(x).returnX() + points.at(y).returnX();
-					ansy = points.at(x).returnY() + points.at(y).returnY();
+				if (mostp < p) {
+					ansx = (points.at(x).returnX() + points.at(y).returnX()) / 2;
+					ansy = (points.at(x).returnY() + points.at(y).returnY()) / 2;
 					mostp = p;
 				}
 			}
